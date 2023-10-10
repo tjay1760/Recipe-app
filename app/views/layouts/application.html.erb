@@ -11,21 +11,6 @@
   </head>
 
   <body>
-<<<<<<< HEAD
-    <header>
-<% if user_signed_in? %>
-  <ul class="menu">
-    <li><a href="<%= food_index_path %>" class="pages-links btn-foods">Foods</a></li>
-    <li><a href="<%= recipe_index_path %>" class="pages-links btn-recipes">Your Recipes</a></li>
-    <li><a href="<%= public_recipe_index_path %>" class="pages-links btn-recipes">Public Recipes</a></li>
-  </ul>
-<% end %>
-
-
-      </header>
-    <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-=======
 
     <header>
       <% if user_signed_in? %>
@@ -38,7 +23,6 @@
     </header>
 
 
->>>>>>> c648cf46063fc93fab959b4cd8e241e28c361a86
     <%= yield %>
   </body>
 </html>
