@@ -1,1 +1,17 @@
-<h1>Welcome to the Public Recipe Index Page</h1>
+<div class='no-recipes'>
+  <%= "No Public recipes available." if @public_recipes.empty? %>
+</div>
+<% @public_recipes.each do |recipe| %>
+    <ul class="recipe-list">
+        <li>
+            <div class="left">
+              <h2><%= recipe.name %></2>
+              <p>By: <%= recipe.user.name %></p>
+            </div>
+            <div class="right">
+               <p>Total food items: <%= recipe.recipe_foods.count %></p>
+               <p>Total price: </p>
+            </div>
+       </li>
+    </ul>
+<% end %>
