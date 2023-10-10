@@ -22,7 +22,8 @@ node_modules/
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
-
+# .gitignore
+node_modules/
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
