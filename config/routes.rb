@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root 'users#index'
 
@@ -7,4 +8,6 @@ Rails.application.routes.draw do
   resources :recipe_food, only: %i[index show]
   resources :public_recipe, only: [:index]
   resources :general_shopping_list, only: [:index]
+
 end
+
