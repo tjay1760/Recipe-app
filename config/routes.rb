@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  get 'users/index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users
+  root 'users#index'
 
-  # Add a route for the "users" page
-  get '/users', to: 'users#index', as: 'users'
-
-
+  resources :recipe, only: %i[index show]
+  resources :food, only: %i[index show]
+  resources :recipe_food, only: %i[index show]
+  resources :public_recipe, only: [:index]
+  resources :general_shopping_list, only: [:index]
 
 end
 

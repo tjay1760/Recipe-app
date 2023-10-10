@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # rubocop:disable all
+=======
+
+>>>>>>> caefad50e9aa3983c3c21af5d81919d852300eed
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
@@ -20,4 +24,7 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+
+
+
 end
