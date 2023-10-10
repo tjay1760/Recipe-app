@@ -1,4 +1,7 @@
-class UsersController < ApplicationController
+class RecipeController < ApplicationController
     def index
     end
-end
+  
+    def show
+    end
+  end
