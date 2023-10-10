@@ -57,8 +57,4 @@ Style/HashEachMethods:
 Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
-<<<<<<< HEAD
   Enabled: false
-=======
-  Enabled: false
->>>>>>> caefad50e9aa3983c3c21af5d81919d852300eed
