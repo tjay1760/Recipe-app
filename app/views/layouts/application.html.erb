@@ -11,6 +11,7 @@
   </head>
 
   <body>
+
     <header>
       <% if user_signed_in? %>
         <ul class="menu">
@@ -20,6 +21,7 @@
         </ul>
       <% end %>
     </header>
+
 
     <%= yield %>
   </body>
