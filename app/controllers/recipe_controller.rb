@@ -9,6 +9,12 @@ class RecipeController < ApplicationController
     @recipe = Recipe.new
   end
 
+  def show
+    @user = current_user
+    @recipe = Recipe.find(params[:id])
+    @recipe_foods = @recipe.recipe_foods
+  end
+
   def create
     @user = current_user
     @recipe = current_user.recipes.build(recipe_params)
