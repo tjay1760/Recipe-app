@@ -1,1 +1,19 @@
-<h1>Foods</h1>
+<div class='no-foods'>
+<%= "No foods available." if @foods.empty?%>
+</div>
+<div class='add-food'>
+<%= link_to "Add food", new_food_path, class: "btn-addfood" %>
+</div>
+<table class = 'food-table'>
+<tr class = 'table-raw'>
+<th class = 't-data'>Food</th>
+<th class = 't-data'>Measurement_unit</th>
+<th class = 't-data'>Unit Price</th>
+<th class = 't-data'>quantity</th>
+<th></th>
+
+</tr>
+<% @foods.each do |food| %>
+<%= render 'food', food: food %>
+<%end%>
+</table>

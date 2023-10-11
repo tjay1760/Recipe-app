@@ -214,6 +214,10 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2023.3)
       tzinfo (>= 1.0.0)
+<<<<<<< HEAD
+=======
+    unicode-display_width (2.5.0)
+>>>>>>> d238cf2f1e16ba4d2406557e8dd37ad3eed309b9
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
