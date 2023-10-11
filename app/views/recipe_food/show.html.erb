@@ -1,1 +1,61 @@
-<h1>recipefoods#show</h1>
+<h1><%= @recipe.name %></h1>
+
+<section class='recipe-details'>
+  <div>
+    <p>Preparation Time: <%= @recipe.preparation_time %></p>
+    <p>Cooking Time: <%= @recipe.cooking_time %></p>
+    <p>Description: <%= @recipe.description %></p>
+  </div>
+  <div class='status'>
+    <p>Status: <%= @recipe.public ? 'Public' : 'Private' %></p>
+
+    <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
+      <%= f.hidden_field :public, value: !@recipe.public %>
+      <button type="submit" class="toggle-status-button" %>');"></button>
+    <% end %>
+  </div>
+</section>
+
+<section class='link-buttons'>
+  <%= link_to 'Generate Shopping List', general_shopping_list_index_path, class: 'btn' %>
+  <% if @recipe.user == current_user %>
+    <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe), class: 'btn' %>
+  <% end %>
+</section>
+
+<section class='recipe-table-section'>
+  <% if @recipe_foods.empty? %>
+    <div class='recipe-show-none'>
+      <h1>No Ingredients Added. Please Add an Ingredient</h1>
+    </div>
+  <% else %>
+    <div class='recipe-show-table'>
+      <table class='table recipe-table'>
+        <thead>
+          <tr>
+            <th class='table-data'>Food</th>
+            <th class='table-data'>Quantity</th>
+            <th class='table-data'>Value</th>
+            <% if @recipe.user == current_user %>
+              <th class='table-data'>Actions</th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <% @recipe_foods.each do |recipe_food| %>
+            <tr>
+              <td class='table-data'><%= recipe_food.food.name %></td>
+              <td class='table-data'><%= "#{recipe_food.quantity} #{recipe_food.food.measurement_unit}" %></td>
+              <td class='table-data'><%= "$#{(recipe_food.food.price.to_i * recipe_food.quantity.to_i) / 100.0}" %></td>
+              <% if @recipe.user == current_user %>
+                <td class='table-data'>
+                  <%= button_to "Delete", recipe_food_path(recipe_food), method: :delete, data: { turbo_confirm: 'Are you sure you want to delete this ingredient?' } %>
+                </td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</section>
