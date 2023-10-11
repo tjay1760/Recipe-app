@@ -3,22 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
+gem 'pg'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.8'
-<<<<<<< HEAD
-
-=======
-gem 'rubocop', '>= 1.0', '< 2.0'
->>>>>>> caefad50e9aa3983c3c21af5d81919d852300eed
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-<<<<<<< HEAD
 gem 'sqlite3', '~> 1.4'
-=======
-gem 'pg'
->>>>>>> caefad50e9aa3983c3c21af5d81919d852300eed
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
