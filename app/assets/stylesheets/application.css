@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Style for the header */
+/* Style for the header */
+/* Style for the header */
+header {
+    background-color: #4287f5; /* Gorgeous blue background color */
+    padding: 10px 0; /* Add padding to the top and bottom */
+    text-align: center; /* Center-align the content */
+  }
+  
+  /* Style for the navigation menu */
+  .menu {
+    list-style-type: none; /* Remove the bullet points */
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline; /* Display menu items horizontally */
+    margin-right: 20px; /* Add spacing between menu items */
+  }
+  
+  .menu a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Gorgeous white text color */
+    font-weight: bold; /* Make the text bold */
+    transition: color 0.3s; /* Add a smooth color transition */
+  }
+  
+  .menu a:hover {
+    color: #ffd700; /* Golden text color on hover */
+  }
+  
+  
+  
