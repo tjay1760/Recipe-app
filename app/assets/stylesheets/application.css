@@ -18,31 +18,31 @@
 /* Style for the header */
 /* Style for the header */
 header {
-    background-color: #4287f5; /* Gorgeous blue background color */
-    padding: 10px 0; /* Add padding to the top and bottom */
-    text-align: center; /* Center-align the content */
+    background-color: #4287f5; 
+    padding: 10px 0;
+    text-align: center;
   }
   
   /* Style for the navigation menu */
   .menu {
-    list-style-type: none; /* Remove the bullet points */
+    list-style-type: none;
     padding: 0;
   }
   
   .menu li {
-    display: inline; /* Display menu items horizontally */
-    margin-right: 20px; /* Add spacing between menu items */
+    display: inline;
+    margin-right: 20px;
   }
   
   .menu a {
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* Gorgeous white text color */
-    font-weight: bold; /* Make the text bold */
-    transition: color 0.3s; /* Add a smooth color transition */
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
   }
   
   .menu a:hover {
-    color: #ffd700; /* Golden text color on hover */
+    color: #ffd700;
   }
   
   
