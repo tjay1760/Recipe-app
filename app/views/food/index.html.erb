@@ -13,7 +13,7 @@
 <th></th>
 
 </tr>
-<% @foods.each do |food| %>
+<% @foods.includes(:user).each do |food| %>
 <%= render 'food', food: food %>
 <%end%>
 </table>
