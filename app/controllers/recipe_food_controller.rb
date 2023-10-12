@@ -6,11 +6,10 @@ class RecipeFoodController < ApplicationController
 
   def new
     @user = current_user
-    @recipe = Recipe.find(params[:recipe_id]) 
-    @recipe_food = @recipe.recipe_foods.build 
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_food = @recipe.recipe_foods.build
     @foods = Food.all
   end
-  
 
   def show
     @user = current_user
@@ -38,8 +37,8 @@ class RecipeFoodController < ApplicationController
 
   def destroy
     @user = current_user
-    @recipe_food = RecipeFood.find(params[:id]) 
-    @recipe = @recipe_food.recipe 
+    @recipe_food = RecipeFood.find(params[:id])
+    @recipe = @recipe_food.recipe
 
     if @recipe_food.destroy
       redirect_to recipe_path(@recipe), notice: 'Food was successfully deleted from the recipe.'
@@ -47,8 +46,7 @@ class RecipeFoodController < ApplicationController
       redirect_to recipe_path(@recipe), alert: 'Failed to delete food from the recipe.'
     end
   end
-  
-  
+
   private
 
   def ref_params
