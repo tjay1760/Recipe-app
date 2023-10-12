@@ -49,7 +49,7 @@
               <td class='table-data'><%= "$#{(recipe_food.food.price.to_i * recipe_food.quantity.to_i) / 100.0}" %></td>
               <% if @recipe.user == current_user %>
                 <td class='table-data'>
-                  <%= button_to "Delete", recipe_food_path(recipe_food), method: :delete, data: { turbo_confirm: 'Are you sure you want to delete this ingredient?' } %>
+                  <%= button_to "Delete", recipe_food_path(recipe_food), method: :delete, data: { turbo_confirm: "Are you sure you want to delete recipe with ID #{recipe.id} associated with food ID #{recipe_food.id}?"  } %>
                 </td>
               <% end %>
             </tr>

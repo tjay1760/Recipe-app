@@ -38,16 +38,17 @@ class RecipeFoodController < ApplicationController
 
   def destroy
     @user = current_user
-    @recipe = RecipeFood.find_by(id: params[:id])# Get the associated Recipe using the recipe_id parameter
-  
-    if @recipe.destroy
+    @recipe_food = RecipeFood.find(params[:id]) 
+    @recipe = @recipe_food.recipe 
+
+    if @recipe_food.destroy
       redirect_to recipe_path(@recipe), notice: 'Food was successfully deleted from the recipe.'
     else
       redirect_to recipe_path(@recipe), alert: 'Failed to delete food from the recipe.'
     end
   end
   
-
+  
   private
 
   def ref_params
