@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Style for the header */
+/* Style for the header */
+/* Style for the header */
+header {
+    background-color: #4287f5; 
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* Style for the navigation menu */
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #ffd700;
+  }
+  
+  
+  
