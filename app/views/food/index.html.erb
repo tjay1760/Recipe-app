@@ -1,3 +1,4 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
 <div class='no-foods'>
 <%= "No foods available." if @foods.empty?%>
 </div>
@@ -5,7 +6,7 @@
 <%= link_to "Add food", new_food_path, class: "btn-addfood" %>
 </div>
 <table class = 'food-table'>
-<tr class = 'table-raw'>
+<tr class = 'table-row'>
 <th class = 't-data'>Food</th>
 <th class = 't-data'>Measurement_unit</th>
 <th class = 't-data'>Unit Price</th>

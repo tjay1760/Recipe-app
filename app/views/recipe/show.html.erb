@@ -1,3 +1,5 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
 <h1><%= @recipe.name %></h1>
 
 <section class='recipe-details'>
@@ -11,15 +13,14 @@
 
     <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
       <%= f.hidden_field :public, value: !@recipe.public %>
-      <button type="submit" class="toggle-status-button" %>');"></button>
     <% end %>
   </div>
 </section>
 
 <section class='link-buttons'>
-<%=link_to 'Generate Shopping list', general_shopping_list_index_path(recipe_id: @recipe.id) , class: 'btn'%>
+<%=link_to 'Generate Shopping list', general_shopping_list_index_path(recipe_id: @recipe.id) , class: 'btn-addrecipe'%>
   <% if @recipe.user == current_user %>
-    <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe), class: 'btn' %>
+    <%= link_to 'Add Ingredient', new_recipe_recipe_food_path(@recipe), class: 'btn-addrecipe' %>
   <% end %>
 </section>
 
@@ -30,9 +31,9 @@
     </div>
   <% else %>
     <div class='recipe-show-table'>
-      <table class='table recipe-table'>
+      <table class='table recipe-table food-table'>
         <thead>
-          <tr>
+          <tr class = 'table-row'>
             <th class='table-data'>Food</th>
             <th class='table-data'>Quantity</th>
             <th class='table-data'>Value</th>
@@ -42,8 +43,8 @@
           </tr>
         </thead>
         <tbody>
-          <% @recipe_foods.each do |recipe_food| %>
-            <tr>
+          <% @recipe_foods.each_with_index do |recipe_food, index| %>
+            <tr class='<%= index.even? ? 'even-row' : 'odd-row' %>'>
               <td class='table-data'><%= recipe_food.food.name %></td>
               <td class='table-data'><%= "#{recipe_food.quantity} #{recipe_food.food.measurement_unit}" %></td>
               <td class='table-data'><%= "$#{(recipe_food.food.price.to_i * recipe_food.quantity.to_i) / 100.0}" %></td>
