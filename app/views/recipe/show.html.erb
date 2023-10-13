@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
 <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
 
-<h1><%= @recipe.name %></h1>
+<h1 class="recipe"><%= @recipe.name %></h1>
 
 <section class='recipe-details'>
   <div>
@@ -12,7 +12,7 @@
 
   <div class='status'>
     <p>Status: <%= @recipe.public ? 'Public' : 'Private' %></p>
-    <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
+    <%= form_for @recipe, url: toggle_public_recipe_path(@recipe), method: :patch do |f| %>
       <%= f.hidden_field :public, value: !@recipe.public %>
       <button type="submit" class="toggle-status-button" style="background-image: url('<%= asset_path(@recipe.public ? 'on-button.png' : 'off-button.png') %>');"></button>
     <% end %>

@@ -29,3 +29,14 @@
   border: none;
   background-color: transparent;
 }
+.status{
+  display: flex;
+  gap: 1%;
+}
+.recipe-details{
+display:flex;
+justify-content: space-around;
+}
+.recipe{
+  text-align: center;
+}
