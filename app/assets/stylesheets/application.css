@@ -1,14 +1,13 @@
-.menu{
-    display: flex;
-    justify-content: space-between;
-    background-color: beige;
-    list-style-type: none;
-    margin-top: 0%;
-    padding:1%;
-    border-radius: 20px;
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  list-style-type: none;
+  margin-top: 0%;
+  padding: 1%;
+  border-radius: 20px;
 }
-.pages-links {
-    text-decoration: none;
 
-  }
-  
+.pages-links {
+  text-decoration: none;
+}
