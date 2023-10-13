@@ -98,7 +98,7 @@ header {
     align-items: center;
   }
   
-  /* Style your registration form elements */
+  /* Style of registration form elements */
   .field {
     margin-bottom: 1rem;
     text-align: left;
@@ -122,7 +122,7 @@ header {
     margin-top: 1rem;
   }
   
-  /* Style the submit button */
+  /* Style of the submit button */
   input[type="submit"] {
     background-color: var(--clr-blue); /* Define your button color */
     color: #fff;
@@ -132,7 +132,6 @@ header {
     cursor: pointer;
   }
   
-  /* Add more specific CSS rules as needed */
   
   
   
