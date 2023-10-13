@@ -1,3 +1,5 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+<section class ='form-add-food'>
 <h1>Shopping List</h1>
 
 <div class= 'amount-price'>
@@ -12,12 +14,13 @@
       <th class='table-data'>Quantity</th>
       <th class='table-data'>Price</th>
     </tr>
-    <% @missing_food_records.each do |food| %>
-      <tr>
+    <% @missing_food_records.each_with_index do |food,index| %>
+      <tr class='<%= index.even? ? 'even-row' : 'odd-row' %>'>
         <td class='table-data'><%= food.name %></td>
         <td class='table-data'><%= "#{food.quantity} #{food.measurement_unit}" %></td>
         <td class='table-data'><%= "$#{@food_prices[food.id]}" %></td>
       </tr>
     <% end %>
   </table>
+</section>
 </section>
