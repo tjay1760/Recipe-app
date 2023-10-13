@@ -1,26 +1,34 @@
     <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
-<section class ='form-add-food'>
-<h1>Shopping List</h1>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<section class="shopping-list">
+        <div class="shopping-list-container" >
+            <header >
+                <h2 >Shopping Cart</h2>
+            </header>
+            <div class="items-container">
+                <p>Amount of food items to buy: <%= @recipe_foods.count %></p>
+                <p>Total value of food needed: <%= @needed_money %></p>
+            </div>
+            <div class="table-container ">
+                <table class ="food-table">
+                    <thead class = "table-row">
+                        <tr>
+                            <th>Food</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @recipe_foods.each_with_index do |recipe_food, index| %>
+<tr class='table-raw <%= index.even? ? 'even-row' : 'odd-row' %>'>
+                                <td><%= recipe_food.food.name %></td>
+                                <td><%= (recipe_food.food.quantity - recipe_food.quantity) %></td>
+                                <td><%= (recipe_food.food.quantity - recipe_food.quantity) * recipe_food.food.price %></td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-<div class= 'amount-price'>
-  <p>Amount of food items to buy : <%= @missing_foods&.count.to_i %> <p>
-  <p>total value of food needed: <%= @sum %></p>
-</div>
-
-<section class='shopping-table'>
-<table class='table food-table shopping-t'></table>
-    <tr>
-      <th class='table-data'>Food</th>
-      <th class='table-data'>Quantity</th>
-      <th class='table-data'>Price</th>
-    </tr>
-    <% @missing_food_records.each_with_index do |food,index| %>
-      <tr class='<%= index.even? ? 'even-row' : 'odd-row' %>'>
-        <td class='table-data'><%= food.name %></td>
-        <td class='table-data'><%= "#{food.quantity} #{food.measurement_unit}" %></td>
-        <td class='table-data'><%= "$#{@food_prices[food.id]}" %></td>
-      </tr>
-    <% end %>
-  </table>
-</section>
 </section>

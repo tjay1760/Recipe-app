@@ -30,7 +30,13 @@ class RecipeController < ApplicationController
       end
     end
   end
+  def toggle_public
+    @recipe = Recipe.find(params[:id])
+    return unless @recipe.user == current_user
 
+    @recipe.update_column(:public, !@recipe.public)
+    redirect_to @recipe, notice: 'Recipe status updated.'
+  end
   def destroy
     @user = current_user
     @recipe = Recipe.find(params[:id])

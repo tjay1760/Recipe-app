@@ -8,6 +8,7 @@ gem 'rails', '~> 7.0.8'
 gem 'rubocop', '>= 1.0', '< 2.0'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
+gem 'psych', '5.1.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'

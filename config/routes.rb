@@ -11,5 +11,11 @@ Rails.application.routes.draw do
   resources :public_recipe, only: [:index]
   resources :general_shopping_list, only: [:index]
 
+  resources :recipe do
+    member do
+      patch :toggle_public
+    end
+  end
+
 end
 
