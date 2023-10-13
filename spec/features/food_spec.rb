@@ -15,6 +15,6 @@ RSpec.describe 'Food new', type: :feature do
   end
 
   it 'see the Create Food button' do
-    expect(page).to have_button('Create Food')
+    expect(page).to have_button('Add')
   end
 end
