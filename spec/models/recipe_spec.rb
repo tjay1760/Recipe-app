@@ -4,7 +4,7 @@ RSpec.describe Recipe, type: :model do
   user = User.new(name: 'John Doe')
 
   subject do
-    Recipe.new(user: user,
+    Recipe.new(user:,
                name: 'Spaghetti Carbonara',
                description: 'A classic Italian pasta dish',
                preparation_time: 20,

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Food, type: :model do
   user = User.new(name: 'John Doe')
   food = Food.new(
-    user: user,
+    user:,
     name: 'Delicious Dish',
     measurement_unit: 'Ounce',
     price: 12.99,
