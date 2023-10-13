@@ -1,5 +1,7 @@
-<div class="form-container">
-  <h1>Add a new food</h1>
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<div class="form-container form-add-food">
+  <h1>Add Ingridient</h1>
   <%= form_with model: @recipe_food, url: recipe_recipe_food_index_path(@recipe), method: :post, local: true, scope: :recipe_food do |form| %>
 
     <div class="field">
@@ -13,7 +15,7 @@
     </div>
 
     <div class="actions">
-      <%= form.submit "Create food" %>
+      <%= form.submit "Create food", class: 'btn-addrecipe' %>
     </div>
   <% end %>
 </div>

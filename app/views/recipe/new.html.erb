@@ -1,4 +1,6 @@
-<div class='form-container'>
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<div class='form-container form-add-food'>
 <h1>Create a New Recipe</h1>
 
 <%= form_with model: @recipe, url: recipe_index_path, method: :post, local: true, scope: :recipe do |form| %>
@@ -27,8 +29,8 @@
     <%= form.check_box :public %>
   </div>
 
-  <div class="actions">
-    <%= form.submit "Create Recipe" %>
+  <div class="actions ">
+    <%= form.submit "Create Recipe ", class: "btn-addrecipe" %>
   </div>
 <% end %>
    <div class="back-to-recipe">

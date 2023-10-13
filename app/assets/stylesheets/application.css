@@ -1,49 +1,20 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 
- /* Style for the header */
-/* Style for the header */
-/* Style for the header */
-header {
-    background-color: #EEA47F; 
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  /* Style for the navigation menu */
-  .menu {
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+
     list-style-type: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    display: inline;
-    margin-right: 20px;
-  }
-  
-  .menu a {
+    margin-top: 0%;
+    padding:1%;
+    border-radius: 20px;
+}
+.pages-links {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+
   }
-  
-  .menu a:hover {
-    color: #ffd700;
-  }
+
 
   /*===================
   css for registration
@@ -73,22 +44,24 @@ input[type="password"] {
 /* Style for the "Sign up" button with !important */
 /* Style for the "Sign up" button within the .actions container */
 .actions input[type="submit"] {
-  background-color: var(--clr-blue); /* Define your button color */
+  background-color: var(--clr-blue);
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: bold; /* Make the text bold */
-  transition: background-color 0.3s; /* Add a smooth background color transition */
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .actions input[type="submit"]:hover {
-  background-color: #1e90ff; /* Change the background color on hover */
+  background-color: #1e90ff;
 }
 
 
-/* Additional CSS can be added below as needed */
+  
+  
 
   
-  
+
+
