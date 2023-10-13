@@ -18,3 +18,7 @@
 .field {
   width: 50%;
 }
+.link-buttons{
+  display: flex;
+  justify-content: space-around;
+}
