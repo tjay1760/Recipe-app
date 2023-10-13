@@ -1,3 +1,5 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
 <h1>Public Recipes</h1>
 <div class='no-recipes'>
   <%= "No Public recipes available." if @public_recipes.empty? %>
