@@ -1,14 +1,13 @@
     <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
         <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
 <section class="shopping-list">
-    <% if @items_to_buy != 0 %>
         <div class="shopping-list-container" >
             <header >
                 <h2 >Shopping Cart</h2>
             </header>
             <div class="items-container">
                 <p>Amount of food items to buy: <%= @recipe_foods.count %></p>
-                <p>Total value of food needed: $<%= @needed_money %></p>
+                <p>Total value of food needed: <%= @needed_money %></p>
             </div>
             <div class="table-container ">
                 <table class ="food-table">
@@ -31,12 +30,5 @@
                 </table>
             </div>
         </div>
-    <% else %>
-        <div>
-            <p>Please go to a recipe to generate a shopping list.</p>
-            <div>
-                <div><%= link_to "My Recipes", recipe_index_path %></div>
-            </div>
-        </div>
-    <% end %>
+
 </section>

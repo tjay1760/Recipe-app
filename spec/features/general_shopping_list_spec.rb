@@ -31,11 +31,11 @@ RSpec.describe 'Recipes index', type: :feature do
 
   it 'displays the total value of food needed' do
     visit general_shopping_list_index_path(recipe_id: @recipe1.id)
-    expect(page).to have_content('total value of food needed: 0')
+    expect(page).to have_content('Total value of food needed: 0')
   end
 
   it 'displays the total number of food items to buy' do
     visit general_shopping_list_index_path(recipe_id: @recipe1.id)
-    expect(page).to have_content('Amount of food items to buy : 0')
+    expect(page).to have_content('Amount of food items to buy: 0')
   end
 end
