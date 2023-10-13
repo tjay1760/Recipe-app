@@ -36,4 +36,12 @@
     margin: auto;
     width:70%;
   }
-  
+  .form-add-food{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    margin:auto;
+  }
+  .add{
+    margin-top: 2%;
+  }
