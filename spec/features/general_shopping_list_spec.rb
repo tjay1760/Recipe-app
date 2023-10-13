@@ -4,18 +4,18 @@ RSpec.describe 'Recipes index', type: :feature do
     Recipe.delete_all
 
     @user = User.first
-    @user ||= User.create!(name: 'Nasir',
-                           email: 'nasir@gmail.com',
+    @user ||= User.create!(name: 'Tjay',
+                           email: 'tjaypod@gmail.com',
                            password: '123456',
                            password_confirmation: '123456',
                            confirmed_at: Time.now)
     @recipe1 = Recipe.create(user: @user,
-                             name: 'Chicken biryani',
+                             name: 'Biryani',
                              description: 'Delicious Chicken biryani',
                              preparation_time: 10,
                              cooking_time: 75)
     @food1 = Food.create(user: @user,
-                         name: 'pasta',
+                         name: 'Steak',
                          measurement_unit: 'grams',
                          price: 20.0,
                          quantity: 10)
