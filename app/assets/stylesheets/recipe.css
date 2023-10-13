@@ -22,3 +22,10 @@
   display: flex;
   justify-content: space-around;
 }
+.toggle-status-button{
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+}
