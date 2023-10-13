@@ -15,11 +15,11 @@
 
 
 
-  /*===================
+/* ===================
   css for registration
-  =====================*/
+  ===================== */
 
- /* Style for the registration form container */
+/* Style for the registration form container */
 .field {
   text-align: left;
 }
@@ -39,8 +39,11 @@ input[type="password"] {
 }
 
 /* Style for the "Sign up" button */
+
 /* Style for the "Sign up" button */
+
 /* Style for the "Sign up" button with !important */
+
 /* Style for the "Sign up" button within the .actions container */
 .actions input[type="submit"] {
   background-color: var(--clr-blue);
@@ -57,10 +60,5 @@ input[type="password"] {
   background-color: #1e90ff;
 }
 
-
-  
-  
-
-  
 
 

@@ -18,32 +18,39 @@
 .field {
   width: 50%;
 }
-.link-buttons{
+
+.link-buttons {
   display: flex;
   justify-content: space-around;
 }
-.toggle-status-button{
+
+.toggle-status-button {
   height: 50px;
   width: 50px;
   background-size: cover;
   border: none;
   background-color: transparent;
 }
-.status{
+
+.status {
   display: flex;
   gap: 1%;
 }
-.recipe-details{
-display:flex;
-justify-content: space-around;
+
+.recipe-details {
+  display: flex;
+  justify-content: space-around;
 }
-.recipe{
+
+.recipe {
   text-align: center;
 }
-.shopping-list-container{
+
+.shopping-list-container {
   text-align: center;
 }
-.items-container{
-display:flex;
-justify-content: space-around;
+
+.items-container {
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,4 +1,4 @@
-#recipe_spec.rb
+# recipe_spec.rb
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :model do
