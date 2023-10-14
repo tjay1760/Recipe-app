@@ -1,0 +1,21 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+<div class='no-foods'>
+<%= "No foods available." if @foods.empty?%>
+</div>
+<div class='add-food'>
+<%= link_to "Add food", new_food_path, class: "btn-addfood" %>
+</div>
+<table class = 'food-table'>
+<tr class = 'table-row'>
+<th class = 't-data'>Food</th>
+<th class = 't-data'>Measurement_unit</th>
+<th class = 't-data'>Unit Price</th>
+<th class = 't-data'>quantity</th>
+<th class = 't-data'>Action</th>
+<th></th>
+
+</tr>
+<% @foods.includes(:user).each do |food| %>
+<%= render 'food', food: food %>
+<%end%>
+</table>

@@ -1,0 +1,20 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<h1>Public Recipes</h1>
+<div class='no-recipes'>
+  <%= "No Public recipes available." if @public_recipes.empty? %>
+</div>
+<% @public_recipes.each do |recipe| %>
+    <ul class="recipe-list">
+        <li>
+            <div class="left">
+              <h2><%= link_to recipe.name, recipe_path(recipe), class: "recipe-name" %></h2>
+              <p>By: <%= recipe.user.name %></p>
+            </div>
+            <div class="right">
+               <p>Total food items: <%= recipe.recipe_foods.count %></p>
+               <p>Total price: <%= calculate_total_price(recipe) %></p>
+            </div>
+       </li>
+    </ul>
+<% end %>

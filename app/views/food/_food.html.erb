@@ -1,0 +1,17 @@
+<% index = @foods.index(food) %>
+<tr class='table-raw <%= index.even? ? 'even-row' : 'odd-row' %>'>
+  <td class='table-data'><%= food.name %></td>
+  <td class='table-data'><%= food.measurement_unit %></td>
+  <td class='table-data'>$<%= food.price %></td>
+  <td class='table-data'><%= food.quantity %></td>
+  <td class='table-data'>
+  <% if current_user == food.user %>
+    <%= link_to "DELETE", food_path(food), class: "btn-delete",
+                 method: :delete, data: {
+                   turbo_method: :delete,
+                   turbo_confirm: "Are you sure?"
+                 } %>
+  <% end %>
+</td>
+
+</tr>

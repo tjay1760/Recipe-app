@@ -1,0 +1,34 @@
+    <%= stylesheet_link_tag "food", "data-turbo-track": "reload" %>
+        <%= stylesheet_link_tag "recipe", "data-turbo-track": "reload" %>
+<section class="shopping-list">
+        <div class="shopping-list-container" >
+            <header >
+                <h2 >Shopping Cart</h2>
+            </header>
+            <div class="items-container">
+                <p>Amount of food items to buy: <%= @recipe_foods.count %></p>
+                <p>Total value of food needed: <%= @needed_money %></p>
+            </div>
+            <div class="table-container ">
+                <table class ="food-table">
+                    <thead class = "table-row">
+                        <tr>
+                            <th>Food</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @recipe_foods.each_with_index do |recipe_food, index| %>
+<tr class='table-raw <%= index.even? ? 'even-row' : 'odd-row' %>'>
+                                <td><%= recipe_food.food.name %></td>
+                                <td><%= (recipe_food.food.quantity - recipe_food.quantity) %></td>
+                                <td><%= (recipe_food.food.quantity - recipe_food.quantity) * recipe_food.food.price %></td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</section>

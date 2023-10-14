@@ -1,0 +1,66 @@
+.btn-addfood {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(65, 57, 47);
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-left: 77%;
+  margin-bottom: 1%;
+  text-decoration: none;
+}
+
+.btn-addrecipe {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(65, 57, 47);
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1%;
+  text-decoration: none;
+}
+
+.btn-addfood:hover {
+  transform: scale(1.01);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-addfood:active {
+  transform: scale(1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.table-row {
+  background-color: beige;
+}
+
+.even-row {
+  background-color: #f2f2f2; /* or any other desired color */
+}
+
+.odd-row {
+  background-color: #fff; /* or the default background color */
+}
+
+.food-table {
+  margin: auto;
+  width: 70%;
+}
+
+.form-add-food {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+}
+
+.add {
+  margin-top: 2%;
+}
