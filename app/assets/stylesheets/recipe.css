@@ -54,3 +54,7 @@
   display: flex;
   justify-content: space-around;
 }
+
+.recipe-list {
+  padding: 0;
+}
